@@ -122,6 +122,7 @@ System memory in use after: 96.0 MB.
 Unloading 31 unused Assets to reduce memory usage. Loaded Objects now: 2626.
 Total: 3.405000 ms (FindLiveObjects: 0.229400 ms CreateObjectMapping: 0.053500 ms MarkObjects: 2.979100 ms  DeleteObjects: 0.141700 ms)
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -546,6 +547,9 @@ Total: 3.252700 ms (FindLiveObjects: 0.184700 ms CreateObjectMapping: 0.050800 m
 =======
 <<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+<<<<<<< HEAD
+>>>>>>> Stashed changes
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -561,8 +565,11 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Import Request.
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> Stashed changes
   path: Assets/GitHub
   artifactKey: Guid(40d95344f8ca4cb4d95a6d6be82f00f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/GitHub using Guid(40d95344f8ca4cb4d95a6d6be82f00f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd91cb29bc65f2129082b7c259886cb65') in 0.006256 seconds 
@@ -1147,6 +1154,9 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   Time since last request: 274.274972 seconds.
   path: Assets/Parallax/Parallax Exsample.prefab
@@ -1962,6 +1972,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+>>>>>>> caa6354c9b0e35e7f78a5fb9c75f5a5c67bc21cb
+>>>>>>> Stashed changes
 =======
 >>>>>>> caa6354c9b0e35e7f78a5fb9c75f5a5c67bc21cb
 >>>>>>> Stashed changes
@@ -1970,9 +1984,15 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
 >>>>>>> Stashed changes
 =======
 >>>>>>> caa6354c9b0e35e7f78a5fb9c75f5a5c67bc21cb
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes

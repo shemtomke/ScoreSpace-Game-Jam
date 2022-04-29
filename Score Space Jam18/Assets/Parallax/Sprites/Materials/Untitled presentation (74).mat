@@ -44,8 +44,11 @@ Material:
         m_Texture: {fileID: 2800000, guid: 32e2daedb816c6245937905405ef8963, type: 3}
         m_Scale: {x: 1, y: 1}
 <<<<<<< Updated upstream:Score Space Jam18/Assets/Parallax/Sprites/Materials/Untitled presentation (74).mat
+<<<<<<< Updated upstream:Score Space Jam18/Assets/Parallax/Sprites/Materials/Untitled presentation (74).mat
         m_Offset: {x: 0.4360956, y: 0}
 =======
+=======
+>>>>>>> Stashed changes:Score Space Jam18/Assets/Parallax/Materials/Untitled presentation (74).mat
 <<<<<<< HEAD:Score Space Jam18/Assets/Parallax/Materials/Untitled presentation (74).mat
 <<<<<<< Updated upstream
         m_Offset: {x: 0.71566975, y: 0}
@@ -55,6 +58,9 @@ Material:
 =======
         m_Offset: {x: 0.4360956, y: 0}
 >>>>>>> caa6354c9b0e35e7f78a5fb9c75f5a5c67bc21cb:Score Space Jam18/Assets/Parallax/Sprites/Materials/Untitled presentation (74).mat
+<<<<<<< Updated upstream:Score Space Jam18/Assets/Parallax/Sprites/Materials/Untitled presentation (74).mat
+>>>>>>> Stashed changes:Score Space Jam18/Assets/Parallax/Materials/Untitled presentation (74).mat
+=======
 >>>>>>> Stashed changes:Score Space Jam18/Assets/Parallax/Materials/Untitled presentation (74).mat
     - _MetallicGlossMap:
         m_Texture: {fileID: 0}
