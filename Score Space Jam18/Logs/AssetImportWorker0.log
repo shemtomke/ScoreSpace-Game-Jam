@@ -164,3 +164,4 @@ Received Import Request.
   path: Assets/Parallax/Sprites/Untitled presentation (71).png
   artifactKey: Guid(4cd6a159d80034b4783d6ce0ec36ce76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Parallax/Sprites/Untitled presentation (71).png using Guid(4cd6a159d80034b4783d6ce0ec36ce76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1fb14e0a4903ea26c2d74bdeeff40e06') in 0.063492 seconds 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
