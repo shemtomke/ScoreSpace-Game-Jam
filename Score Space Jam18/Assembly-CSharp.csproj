@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Assets\Parallax\Scripts\OffsetScrolling.cs" />
     <Compile Include="Assets\Parallax\Scripts\ParallaxController.cs" />
+    <Compile Include="Assets\Scripts\Player.cs" />
+    <Compile Include="Assets\Scripts\Metal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
