@@ -4827,6 +4827,7 @@ GameObject:
   - component: {fileID: 8743935752166805967}
   - component: {fileID: 8743935752166805954}
   - component: {fileID: 8743935752166805955}
+  - component: {fileID: 1413404048633249070}
   m_Layer: 0
   m_Name: CaterpillarEnemy
   m_TagString: Enemy
@@ -4961,3 +4962,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!95 &1413404048633249070
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8743935752166805966}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 804c60889adae41478e1f9ba4217af7e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
