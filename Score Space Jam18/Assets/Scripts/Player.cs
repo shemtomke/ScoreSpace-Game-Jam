@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
 
     public static Vector3 MousePos;
     [SerializeField] Camera cam;
+    public LeaderBoard leaderBoard;
 
     Rigidbody2D rb;
     private void Start()

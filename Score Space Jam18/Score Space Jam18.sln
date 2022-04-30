@@ -3,6 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{9997377D-FA27-3682-589C-159511F08A4A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlayerPrefsEditor.Samples.SampleScene", "Unity.PlayerPrefsEditor.Samples.SampleScene.csproj", "{AE17BA9D-66BB-0470-C6FE-13C2E72B131A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlayerPrefsEditor.Editor", "Unity.PlayerPrefsEditor.Editor.csproj", "{68B05672-E13A-7D8B-42EF-9FE41EE4B804}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.PlayerPrefsEditor.EditorResources", "Unity.PlayerPrefsEditor.EditorResources.csproj", "{268631B2-63DA-9FA1-343A-85A79BE429B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +19,18 @@ Global
 		{9997377D-FA27-3682-589C-159511F08A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9997377D-FA27-3682-589C-159511F08A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9997377D-FA27-3682-589C-159511F08A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE17BA9D-66BB-0470-C6FE-13C2E72B131A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE17BA9D-66BB-0470-C6FE-13C2E72B131A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE17BA9D-66BB-0470-C6FE-13C2E72B131A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE17BA9D-66BB-0470-C6FE-13C2E72B131A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68B05672-E13A-7D8B-42EF-9FE41EE4B804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68B05672-E13A-7D8B-42EF-9FE41EE4B804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68B05672-E13A-7D8B-42EF-9FE41EE4B804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68B05672-E13A-7D8B-42EF-9FE41EE4B804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{268631B2-63DA-9FA1-343A-85A79BE429B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{268631B2-63DA-9FA1-343A-85A79BE429B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{268631B2-63DA-9FA1-343A-85A79BE429B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{268631B2-63DA-9FA1-343A-85A79BE429B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
