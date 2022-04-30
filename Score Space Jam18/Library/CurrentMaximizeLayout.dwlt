@@ -84,7 +84,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -170,9 +170,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 7a0bffff
-      m_LastClickedID: -62598
-      m_ExpandedIDs: 7a0bffffd853ffff9671ffff8876ffff88b7fffff8c6ffff58c7ffffc0f8ffff406c0000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: d853ffff9671ffff8876ffff88b7fffff8c6ffff58c7ffffc0f8ffff406c0000b06c0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -290,8 +290,8 @@ MonoBehaviour:
     y: 0
     width: 502
     height: 387
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 9}
   m_Panes:
   - {fileID: 9}
@@ -334,9 +334,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 985.5465, y: 449.95685, z: -232.08867}
+    m_Target: {x: 1042.3953, y: 498.6356, z: -182.3967}
     speed: 2
-    m_Value: {x: 985.5465, y: 449.95685, z: -232.08867}
+    m_Value: {x: 1042.3953, y: 498.6356, z: -182.3967}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -387,9 +387,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 514.97864
+    m_Target: 955.10583
     speed: 2
-    m_Value: 514.97864
+    m_Value: 955.10583
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -534,22 +534,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Font
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Font
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: E:\Unity Projects\ScoreSpace-Game-Jam\Score Space Jam18
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 45}
-    m_SelectedIDs: 5c830000
-    m_LastClickedID: 33628
-    m_ExpandedIDs: 0000000090480000a048000000ca9a3b
+    m_SelectedIDs: a0480000
+    m_LastClickedID: 18592
+    m_ExpandedIDs: 000000009048000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -577,7 +577,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000090480000a048000000ca9a3b
+    m_ExpandedIDs: 000000009048000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -602,9 +602,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 7a0bffff
-    m_LastClickedInstanceID: -62598
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300001c4300001e4300009e63000024580000aa1a0000381a000046750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
