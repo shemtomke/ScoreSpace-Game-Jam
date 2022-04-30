@@ -11,9 +11,12 @@ public class Player : MonoBehaviour
     //can the player move
     public bool isMove;
 
+    //varibles for getting world position
     public static Vector3 MousePos;
     [SerializeField] Camera cam;
 
+
+    //used to setup leaderboard
     public LeaderBoard leaderboard;
 
     Rigidbody2D rb;
@@ -30,6 +33,7 @@ public class Player : MonoBehaviour
     private void Update()
     {
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x);
     }
 
     void Movement()

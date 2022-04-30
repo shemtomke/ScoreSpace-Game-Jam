@@ -9,6 +9,7 @@ public class Metal : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField] GameObject HeldObject;
+    public static GameObject StaticHeldObject;
 
     void Start()
     {
@@ -21,7 +22,9 @@ public class Metal : MonoBehaviour
         {
             if (HeldObject = gameObject)
             {
+                //this moves the object with force so you can throw the object when you releace the mouse button
                 rb.AddForce(new Vector2(Player.MousePos.x - transform.position.x, Player.MousePos.y - transform.position.y));
+                //rotates to make it look cool
                 transform.Rotate(0, 0, 4);
             }
         }
@@ -31,16 +34,18 @@ public class Metal : MonoBehaviour
             transform.Rotate(0, 0, (Mathf.DeltaAngle(transform.eulerAngles.z, 0) / 10));
         }
 
-
+        StaticHeldObject = HeldObject;
     }
     private void OnMouseDown()
     {
+        //when the mouse is pressed the item is grabbed
         HeldObject = gameObject;
         rb.drag = 10;
     }
 
     private void OnMouseUp()
     {
+        //when the mouse is releced the item is droped
         HeldObject = null;
         rb.drag = 1;
     }
