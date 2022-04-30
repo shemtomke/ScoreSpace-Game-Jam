@@ -2,13 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LootLocker.Requests;
+using TMPro;
 
 public class PlayerManeger : MonoBehaviour
 {
+    public LeaderBoard leaderboard;
+    public TMP_InputField playerNameInputfield;
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(LoginRoutine());
+        StartCoroutine(SetupRoutine());
+    }
+
+    public void SetPlayerName()
+    {
+        LootLockerSDKManager.SetPlayerName(playerNameInputfield.text, (response) =>
+        {
+            if (response.success)
+            {
+                Debug.Log("Succesfully set player name");
+            }
+            else
+            {
+                Debug.Log("Could not set player name" + response.Error);
+            }
+        });
+    }
+
+    IEnumerator SetupRoutine()
+    {
+        yield return LoginRoutine();
+        yield return leaderboard.FetchTopHighscoresRoutine();
+        //yield return leaderboard.SubmitScoreRoutine(80);
     }
 
     IEnumerator LoginRoutine()
@@ -18,24 +43,16 @@ public class PlayerManeger : MonoBehaviour
         {
             if (response.success)
             {
-                Debug.Log("Player Loged in");
+                Debug.Log("Player was logged in");
                 PlayerPrefs.SetString("PlayerID", response.player_id.ToString());
                 done = true;
             }
             else
             {
-                Debug.Log("couldnt start sesion");
+                Debug.Log("Could not start session");
                 done = true;
             }
         });
-
         yield return new WaitWhile(() => done == false);
-    }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
