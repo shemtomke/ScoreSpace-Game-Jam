@@ -64,6 +64,7 @@
     <Compile Include="Assets\Scripts\LeaderBoard\PlayerManeger.cs" />
     <Compile Include="Assets\Scripts\LeaderBoard\LeaderBoard.cs" />
     <Compile Include="Assets\Scripts\MainMenuManager.cs" />
+    <Compile Include="Assets\Scripts\Intro.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

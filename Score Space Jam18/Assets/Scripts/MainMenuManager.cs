@@ -7,11 +7,13 @@ using UnityEngine.SceneManagement;
 public class MainMenuManager : MonoBehaviour
 {
 
-    //play game
+    //Load Intro
     public void StartGame()
     {
         SceneManager.LoadScene(1);
     }
+
+    //Mute Game
 
     //exit game
     public void ExitGame()

@@ -55,7 +55,7 @@ public class Player : MonoBehaviour
     {
         yield return leaderboard.SubmitScoreRoutine(GameManeger.score);
         yield return new WaitForSecondsRealtime(1);
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene(3);
     }
 
 }
