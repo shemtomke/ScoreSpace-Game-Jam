@@ -63,6 +63,7 @@
     <Compile Include="Assets\Scripts\GameManeger.cs" />
     <Compile Include="Assets\Scripts\LeaderBoard\PlayerManeger.cs" />
     <Compile Include="Assets\Scripts\LeaderBoard\LeaderBoard.cs" />
+    <Compile Include="Assets\Scripts\MainMenuManager.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -744,6 +745,9 @@
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="lootlocker.lootlockersdk.runtime">
+      <HintPath>Library\ScriptAssemblies\lootlocker.lootlockersdk.runtime.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
