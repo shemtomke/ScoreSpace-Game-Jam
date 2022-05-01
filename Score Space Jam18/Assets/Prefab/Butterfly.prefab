@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 1915419252283984635}
   m_Layer: 6
   m_Name: Butterfly
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

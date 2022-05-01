@@ -9,13 +9,18 @@ public class Metal : MonoBehaviour
     Rigidbody2D rb;
 
     [SerializeField] GameObject HeldObject;
+    [SerializeField] ParticleSystem Destroyeffect;
     public static GameObject StaticHeldObject;
     [SerializeField] bool move;
     [SerializeField] float speed;
+    Collider2D collider;
+    SpriteRenderer spriteRenderer;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        collider = GetComponent<Collider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void FixedUpdate()
@@ -45,8 +50,8 @@ public class Metal : MonoBehaviour
         if (move && transform.position.y < -2.9)
         {
             rb.AddForce(Vector2.left * Time.deltaTime * speed);
+            rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -5, 5), 0);
         }
-        rb.velocity =  new Vector2(Mathf.Clamp(rb.velocity.x, -5, 5), 0);
     }
 
     private void OnMouseDown()
@@ -69,5 +74,19 @@ public class Metal : MonoBehaviour
         {
             Physics2D.IgnoreCollision(collision.collider, collision.otherCollider);
         }
+
+        if (collision.gameObject.tag == "Boss")
+        {
+            StartCoroutine(DeathCoroutine());
+        }
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        collider.enabled = false;
+        Destroyeffect.Play();
+        spriteRenderer.enabled = false;
+        yield return new WaitForSecondsRealtime(1);
+        Destroy(gameObject);
     }
 }

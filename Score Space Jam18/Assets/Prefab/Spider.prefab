@@ -227,7 +227,7 @@ GameObject:
   - component: {fileID: 2059641057819657675}
   m_Layer: 6
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -377,3 +377,4 @@ MonoBehaviour:
   - {fileID: 4496244331266105971, guid: dcb98f4562a2eac4eb0b54662f5614a2, type: 3}
   - {fileID: 2703016081161079723}
   EnemyQue: []
+  SpawnXEnemys: 0
