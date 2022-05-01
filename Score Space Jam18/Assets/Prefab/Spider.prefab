@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2703016079091066551}
   - component: {fileID: 2703016079091066550}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2703016081098357313}
   - component: {fileID: 2703016081098357312}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Web
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -224,7 +224,8 @@ GameObject:
   - component: {fileID: 2703016081161079727}
   - component: {fileID: 2703016081161079724}
   - component: {fileID: 2703016081161079726}
-  m_Layer: 0
+  - component: {fileID: 2059641057819657675}
+  m_Layer: 6
   m_Name: Spider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,3 +356,24 @@ CircleCollider2D:
   m_Offset: {x: -0.013505697, y: 0.21549985}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &2059641057819657675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2703016081161079723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8df94ad88eb8b4d9f2fc63660e8347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefabs:
+  - {fileID: 8743935752166805966, guid: 9a896604b35b4c7438439f0df4da4345, type: 3}
+  - {fileID: 398613838714865427, guid: 368d81163acd3934380d321921e8984f, type: 3}
+  - {fileID: 1781738309690031, guid: 228e4e61383e1ee4cbe11cbd099d6f34, type: 3}
+  BossPrefabs:
+  - {fileID: 1915419252283984634, guid: 84330fd56177bd646ab198c93b04cd29, type: 3}
+  - {fileID: 4496244331266105971, guid: dcb98f4562a2eac4eb0b54662f5614a2, type: 3}
+  - {fileID: 2703016081161079723}
+  EnemyQue: []

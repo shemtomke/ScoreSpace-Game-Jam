@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1781738309690019}
   - component: {fileID: 1781738309690018}
   - component: {fileID: 1793640298}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: SnailEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 7627641167655322507}
   - component: {fileID: 777093345446940805}
   - component: {fileID: 7268929464194913786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DestroyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 398613838714865439}
   - component: {fileID: 398613838714865438}
   - component: {fileID: 113280332}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: LadyBugEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -178,7 +178,7 @@ GameObject:
   - component: {fileID: 7806055838456636983}
   - component: {fileID: 1100768438965564729}
   - component: {fileID: 7020568120076726342}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DestroyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}

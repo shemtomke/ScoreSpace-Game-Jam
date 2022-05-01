@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915419250786018181}
   - component: {fileID: 1915419250786018186}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1915419252283984632}
   - component: {fileID: 1915419252283984635}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Butterfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}

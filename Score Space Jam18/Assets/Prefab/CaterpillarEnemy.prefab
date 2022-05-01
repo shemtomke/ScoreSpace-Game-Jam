@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1190133912362840298}
   - component: {fileID: 8328894046224966628}
   - component: {fileID: 2143303939020351131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: DestroyEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4828,7 +4828,7 @@ GameObject:
   - component: {fileID: 8743935752166805954}
   - component: {fileID: 8743935752166805955}
   - component: {fileID: 1413404048633249070}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CaterpillarEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
