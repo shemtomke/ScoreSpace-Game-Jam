@@ -10,6 +10,7 @@ public class Metal : MonoBehaviour
 
     [SerializeField] GameObject HeldObject;
     public static GameObject StaticHeldObject;
+    [SerializeField] bool move;
 
     void Start()
     {
@@ -35,6 +36,12 @@ public class Metal : MonoBehaviour
         }
 
         StaticHeldObject = HeldObject;
+
+
+        if (move && transform.position.y < -2)
+        {
+            rb.AddForce(Vector2.left);
+        }
     }
     private void OnMouseDown()
     {
@@ -52,7 +59,7 @@ public class Metal : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "enemy")
+        if (collision.gameObject.tag == "Enemy")
         {
             Physics2D.IgnoreCollision(collision.collider, collision.otherCollider);
         }

@@ -4843,7 +4843,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8743935752166805966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.29, y: -3.19, z: 0}
+  m_LocalPosition: {x: 13.71, y: -3.19, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 1190133912362840298}
@@ -4915,6 +4915,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   metalSpeed: 0
   HeldObject: {fileID: 0}
+  move: 1
 --- !u!61 &8743935752166805954
 BoxCollider2D:
   m_ObjectHideFlags: 0
