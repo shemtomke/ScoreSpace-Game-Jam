@@ -542,7 +542,7 @@ GameObject:
   - component: {fileID: 187466571}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1482,9 +1482,29 @@ PrefabInstance:
       propertyPath: SpawnXEnemys
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2059641057819657675, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+      propertyPath: DoFinalAttack
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2059641057819657675, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+      propertyPath: moveduringrun
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2703016081161079723, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
       propertyPath: m_Name
       value: Spider
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703016081161079724, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703016081161079724, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+      propertyPath: m_Distance
+      value: 7.741286
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703016081161079724, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+      propertyPath: m_DampingRatio
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2703016081161079725, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
       propertyPath: m_RootOrder
@@ -1496,7 +1516,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2703016081161079725, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.01
+      value: 2.29
       objectReference: {fileID: 0}
     - target: {fileID: 2703016081161079725, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1529,6 +1549,10 @@ PrefabInstance:
     - target: {fileID: 2703016081161079725, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2703016081161079727, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}

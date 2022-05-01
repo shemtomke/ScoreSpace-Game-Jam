@@ -10,9 +10,26 @@ public class BossScript : MonoBehaviour
     [SerializeField] int SpawnXEnemys;
     [SerializeField] List<GameObject> EnemysInScene;
 
+    SpriteRenderer spriteRenderer;
+    Collider2D collider;
+    [SerializeField] ParticleSystem Destroyeffect;
+
+    [SerializeField] bool DoFinalAttack;
+    float FinalAttackTarget;
+    GameObject FinalAttackTargetObject;
+    [SerializeField] bool attackduringRun;
+    [SerializeField] bool moveduringrun;
+    [SerializeField] float moveduringrunTarget;
+
     void Start()
     {
+        collider = GetComponent<Collider2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+
+
         StartCoroutine(SpawnEnemys());
+        moveduringrunTarget = Random.Range(-5.0f, 10.0f);
+        FinalAttackTargetObject = GameObject.FindGameObjectWithTag("Player");
     }
 
     IEnumerator SpawnEnemys()
@@ -46,5 +63,54 @@ public class BossScript : MonoBehaviour
             }
         }
 
+        if (EnemyQue.Count == 0 && EnemysInScene.Count == 0 && DoFinalAttack)
+        {
+            DoFinalAttack = false;
+            StartCoroutine(FinalAttack());
+
+        }
+    }
+
+    IEnumerator FinalAttack()
+    {
+        FinalAttackTarget = FinalAttackTargetObject.transform.position.x;
+
+        while (Mathf.Abs(moveduringrunTarget - transform.position.x) > .1f)
+        {
+            transform.Translate(new Vector2((FinalAttackTarget - transform.position.x) / 30, .02f));
+            yield return new WaitForEndOfFrame();
+        }
+    }
+
+    private void FixedUpdate()
+    {
+        if (Mathf.Abs(moveduringrunTarget - transform.position.x) < .1f)
+        {
+            moveduringrunTarget = Random.Range(-5.0f, 10.0f);
+            Debug.Log("move");
+        }
+
+        if (moveduringrun)
+        {
+            transform.Translate(new Vector2((moveduringrunTarget - transform.position.x) / 50, .02f));
+        }
+
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            StartCoroutine(DeathCoroutine());
+        }
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        collider.enabled = false;
+        Destroyeffect.Play();
+        spriteRenderer.enabled = false;
+        yield return new WaitForSecondsRealtime(1);
+        Destroy(gameObject);
     }
 }
