@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            StartCoroutine(DeathCoroutine());
+            //StartCoroutine(DeathCoroutine());
         }
     }
     

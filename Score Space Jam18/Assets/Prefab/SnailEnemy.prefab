@@ -102,6 +102,7 @@ MonoBehaviour:
   metalSpeed: 0
   HeldObject: {fileID: 0}
   move: 1
+  speed: 5
 --- !u!61 &1781738309690019
 BoxCollider2D:
   m_ObjectHideFlags: 0

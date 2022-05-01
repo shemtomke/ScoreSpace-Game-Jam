@@ -11,6 +11,7 @@ public class Metal : MonoBehaviour
     [SerializeField] GameObject HeldObject;
     public static GameObject StaticHeldObject;
     [SerializeField] bool move;
+    [SerializeField] float speed;
 
     void Start()
     {
@@ -37,12 +38,16 @@ public class Metal : MonoBehaviour
 
         StaticHeldObject = HeldObject;
 
+    }
 
+    private void Update()
+    {
         if (move && transform.position.y < -2)
         {
-            rb.AddForce(Vector2.left);
+            rb.AddForce(Vector2.left * Time.deltaTime * speed);
         }
     }
+
     private void OnMouseDown()
     {
         //when the mouse is pressed the item is grabbed
