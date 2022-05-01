@@ -7,6 +7,7 @@ public class BossScript : MonoBehaviour
     [SerializeField] GameObject[] EnemyPrefabs;
     [SerializeField] GameObject[] BossPrefabs;
     [SerializeField] List<GameObject> EnemyQue;
+    [SerializeField] int SpawnXEnemys;
 
     void Start()
     {
@@ -16,7 +17,7 @@ public class BossScript : MonoBehaviour
     IEnumerator SpawnEnemys()
     {
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < SpawnXEnemys; i++)
         {
             EnemyQue.Add(EnemyPrefabs[Random.Range(0, EnemyPrefabs.Length)]);
         }

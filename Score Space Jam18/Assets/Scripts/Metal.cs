@@ -42,10 +42,11 @@ public class Metal : MonoBehaviour
 
     private void Update()
     {
-        if (move && transform.position.y < -2)
+        if (move && transform.position.y < -2.9)
         {
             rb.AddForce(Vector2.left * Time.deltaTime * speed);
         }
+        rb.velocity =  new Vector2(Mathf.Clamp(rb.velocity.x, -5, 5), 0);
     }
 
     private void OnMouseDown()
