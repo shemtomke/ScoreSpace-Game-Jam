@@ -8,6 +8,7 @@ public class BossScript : MonoBehaviour
     [SerializeField] GameObject[] BossPrefabs;
     [SerializeField] List<GameObject> EnemyQue;
     [SerializeField] int SpawnXEnemys;
+    [SerializeField] List<GameObject> EnemysInScene;
 
     void Start()
     {
@@ -24,14 +25,26 @@ public class BossScript : MonoBehaviour
 
 
         yield return new WaitForSecondsRealtime(Random.Range(1, 3));
+
         while (EnemyQue.Count > 0)
         {
-            Instantiate(EnemyQue[0]);
+            GameObject instanciated = Instantiate(EnemyQue[0]);
+            EnemysInScene.Add(instanciated);
             EnemyQue.RemoveAt(0);
 
             yield return new WaitForSecondsRealtime(Random.Range(1, 3));
         }
+    }
 
+    private void Update()
+    {
+        for (int i = 0; i < EnemysInScene.Count; i++)
+        {
+            if (EnemysInScene[i] == null)
+            {
+                EnemysInScene.Remove(EnemysInScene[i]);
+            }
+        }
 
     }
 }
