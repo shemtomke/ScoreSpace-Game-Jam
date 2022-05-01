@@ -328,7 +328,7 @@ SpringJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2703016081161079723}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
@@ -338,7 +338,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 5.6392093, y: 10.031285}
   m_AutoConfigureDistance: 1
-  m_Distance: 1.9087178
+  m_Distance: 10.22802
   m_DampingRatio: 1
   m_Frequency: 0.8
 --- !u!58 &2703016081161079726
@@ -374,7 +374,6 @@ MonoBehaviour:
   - {fileID: 398613838714865427, guid: 368d81163acd3934380d321921e8984f, type: 3}
   - {fileID: 1781738309690031, guid: 228e4e61383e1ee4cbe11cbd099d6f34, type: 3}
   BossPrefabs:
-  - {fileID: 1915419252283984634, guid: 84330fd56177bd646ab198c93b04cd29, type: 3}
   - {fileID: 4496244331266105971, guid: dcb98f4562a2eac4eb0b54662f5614a2, type: 3}
   - {fileID: 2703016081161079723}
   EnemyQue: []
@@ -388,6 +387,10 @@ MonoBehaviour:
   DoFinalAttack: 1
   attackduringRun: 0
   moveduringrun: 0
+  isBee: 0
+  DieOnGround: 0
+  MoveOnGround: 0
+  move: 0
   moveduringrunTarget: 0
 --- !u!1 &6952167795462928241
 GameObject:

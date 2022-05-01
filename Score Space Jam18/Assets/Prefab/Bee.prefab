@@ -10,6 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4496244331266105969}
   - component: {fileID: 4496244331266105970}
+  - component: {fileID: -7044863653431282373}
+  - component: {fileID: 4883282481999377830}
+  - component: {fileID: 4570473088398502706}
+  - component: {fileID: 1721089803}
+  - component: {fileID: 1721089809}
   m_Layer: 6
   m_Name: Bee
   m_TagString: Boss
@@ -25,7 +30,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4496244331266105971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.96, y: -1.76, z: 0}
+  m_LocalPosition: {x: 11.44, y: 10.02, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,3 +87,112 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-7044863653431282373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496244331266105971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b8df94ad88eb8b4d9f2fc63660e8347, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyPrefabs:
+  - {fileID: 8743935752166805966, guid: 9a896604b35b4c7438439f0df4da4345, type: 3}
+  - {fileID: 398613838714865427, guid: 368d81163acd3934380d321921e8984f, type: 3}
+  - {fileID: 1781738309690031, guid: 228e4e61383e1ee4cbe11cbd099d6f34, type: 3}
+  BossPrefabs:
+  - {fileID: 4496244331266105971}
+  - {fileID: 2703016081161079723, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+  EnemyQue: []
+  SpawnXEnemys: 4
+  EnemysInScene: []
+  Destroyondeath:
+  - {fileID: 2703016079091066548, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+  - {fileID: 2703016081098357326, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+  springJoint2D: {fileID: 4570473088398502706}
+  Destroyeffect: {fileID: 8146682841905230926, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
+  DoFinalAttack: 1
+  attackduringRun: 0
+  moveduringrun: 0
+  isBee: 1
+  DieOnGround: 0
+  MoveOnGround: 1
+  move: 0
+  moveduringrunTarget: 0
+--- !u!70 &4883282481999377830
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496244331266105971}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.16, y: -0.4}
+  m_Size: {x: 4.14, y: 2.46}
+  m_Direction: 1
+--- !u!231 &4570473088398502706
+SpringJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496244331266105971}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 3.1588125, y: 10.140519}
+  m_AutoConfigureDistance: 1
+  m_Distance: 7.101914
+  m_DampingRatio: 0
+  m_Frequency: 1
+--- !u!50 &1721089803
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496244331266105971}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.02
+  m_LinearDrag: 2
+  m_AngularDrag: 1
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!114 &1721089809
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4496244331266105971}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a635844952fea0c4cb9a982dd4393807, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  metalSpeed: 0
+  HeldObject: {fileID: 0}
+  Destroyeffect: {fileID: 0}
+  move: 0
+  speed: 0

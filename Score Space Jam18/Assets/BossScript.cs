@@ -13,6 +13,7 @@ public class BossScript : MonoBehaviour
 
     SpriteRenderer spriteRenderer;
     Collider2D collider;
+    Metal metal;
     [SerializeField] SpringJoint2D springJoint2D;
     [SerializeField] ParticleSystem Destroyeffect;
 
@@ -21,6 +22,7 @@ public class BossScript : MonoBehaviour
     GameObject FinalAttackTargetObject;
     [SerializeField] bool attackduringRun;
     [SerializeField] bool moveduringrun;
+    [SerializeField] bool isBee;
     [SerializeField] bool DieOnGround;
     [SerializeField] bool MoveOnGround;
     [SerializeField] bool move;
@@ -30,6 +32,7 @@ public class BossScript : MonoBehaviour
     {
         collider = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
+        metal = GetComponent<Metal>();
 
 
         StartCoroutine(SpawnEnemys());
@@ -79,6 +82,11 @@ public class BossScript : MonoBehaviour
         {
             transform.Translate(Vector2.left * Time.deltaTime);
         }
+
+        if (isBee && transform.position.x > 15)
+        {
+            StartCoroutine(DeathCoroutine());
+        }
     }
 
     IEnumerator FinalAttack()
@@ -100,6 +108,7 @@ public class BossScript : MonoBehaviour
             else if(MoveOnGround)
             {
                 move = true;
+                metal.enabled = true;
             }
         }
     }
