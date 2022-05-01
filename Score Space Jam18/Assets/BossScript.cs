@@ -9,9 +9,11 @@ public class BossScript : MonoBehaviour
     [SerializeField] List<GameObject> EnemyQue;
     [SerializeField] int SpawnXEnemys;
     [SerializeField] List<GameObject> EnemysInScene;
+    [SerializeField] GameObject[] Destroyondeath;
 
     SpriteRenderer spriteRenderer;
     Collider2D collider;
+    [SerializeField] SpringJoint2D springJoint2D;
     [SerializeField] ParticleSystem Destroyeffect;
 
     [SerializeField] bool DoFinalAttack;
@@ -19,6 +21,9 @@ public class BossScript : MonoBehaviour
     GameObject FinalAttackTargetObject;
     [SerializeField] bool attackduringRun;
     [SerializeField] bool moveduringrun;
+    [SerializeField] bool DieOnGround;
+    [SerializeField] bool MoveOnGround;
+    [SerializeField] bool move;
     [SerializeField] float moveduringrunTarget;
 
     void Start()
@@ -69,39 +74,33 @@ public class BossScript : MonoBehaviour
             StartCoroutine(FinalAttack());
 
         }
+
+        if (move)
+        {
+            transform.Translate(Vector2.left * Time.deltaTime);
+        }
     }
 
     IEnumerator FinalAttack()
     {
-        FinalAttackTarget = FinalAttackTargetObject.transform.position.x;
-
-        while (Mathf.Abs(moveduringrunTarget - transform.position.x) > .1f)
-        {
-            transform.Translate(new Vector2((FinalAttackTarget - transform.position.x) / 30, .02f));
-            yield return new WaitForEndOfFrame();
-        }
-    }
-
-    private void FixedUpdate()
-    {
-        if (Mathf.Abs(moveduringrunTarget - transform.position.x) < .1f)
-        {
-            moveduringrunTarget = Random.Range(-5.0f, 10.0f);
-            Debug.Log("move");
-        }
-
-        if (moveduringrun)
-        {
-            transform.Translate(new Vector2((moveduringrunTarget - transform.position.x) / 50, .02f));
-        }
+        yield return new WaitForSecondsRealtime(1);
+        springJoint2D.enabled = false;
 
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
-            StartCoroutine(DeathCoroutine());
+            if (DieOnGround)
+            {
+                StartCoroutine(DeathCoroutine());
+            }
+            else if(MoveOnGround)
+            {
+                move = true;
+            }
         }
     }
 
@@ -110,7 +109,12 @@ public class BossScript : MonoBehaviour
         collider.enabled = false;
         Destroyeffect.Play();
         spriteRenderer.enabled = false;
+        foreach (GameObject kill in Destroyondeath)
+        {
+            Destroy(kill);
+        }
         yield return new WaitForSecondsRealtime(1);
+        Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
         Destroy(gameObject);
     }
 }

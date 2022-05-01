@@ -240,7 +240,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2703016081161079723}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.6355934, y: 0.01, z: 0}
+  m_LocalPosition: {x: 5.6355934, y: 11.94, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2703016079091066551}
@@ -328,7 +328,7 @@ SpringJoint2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2703016081161079723}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_EnableCollision: 1
   m_ConnectedRigidBody: {fileID: 0}
@@ -338,8 +338,8 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 5.6392093, y: 10.031285}
   m_AutoConfigureDistance: 1
-  m_Distance: 10.021286
-  m_DampingRatio: 0
+  m_Distance: 1.9087178
+  m_DampingRatio: 1
   m_Frequency: 0.8
 --- !u!58 &2703016081161079726
 CircleCollider2D:
@@ -378,10 +378,14 @@ MonoBehaviour:
   - {fileID: 4496244331266105971, guid: dcb98f4562a2eac4eb0b54662f5614a2, type: 3}
   - {fileID: 2703016081161079723}
   EnemyQue: []
-  SpawnXEnemys: 0
+  SpawnXEnemys: 4
   EnemysInScene: []
+  Destroyondeath:
+  - {fileID: 2703016079091066548}
+  - {fileID: 2703016081098357326}
+  springJoint2D: {fileID: 2703016081161079724}
   Destroyeffect: {fileID: 8146682841905230926}
-  DoFinalAttack: 0
+  DoFinalAttack: 1
   attackduringRun: 0
   moveduringrun: 0
   moveduringrunTarget: 0
@@ -410,13 +414,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6952167795462928241}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.82, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.00007346272}
+  m_LocalPosition: {x: -0.8200002, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2703016081161079725}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 179.992, z: 0}
 --- !u!198 &8146682841905230926
 ParticleSystem:
   m_ObjectHideFlags: 0
