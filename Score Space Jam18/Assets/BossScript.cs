@@ -85,7 +85,8 @@ public class BossScript : MonoBehaviour
 
         if (isBee && transform.position.x > 15)
         {
-            StartCoroutine(DeathCoroutine());
+            Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
+            Destroy(gameObject);
         }
     }
 
