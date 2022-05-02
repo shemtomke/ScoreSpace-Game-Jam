@@ -43,13 +43,14 @@ public class Metal : MonoBehaviour
 
         StaticHeldObject = HeldObject;
 
+
     }
 
     private void Update()
     {
         if (move && transform.position.y < -2.9)
         {
-            rb.AddForce(Vector2.left * Time.deltaTime * speed);
+            rb.AddForce(new Vector2((Vector2.left.x * Time.deltaTime * speed) - WaveManeger.IncreasedEnemySpeed, 0));
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -5, 5), 0);
         }
     }
@@ -70,6 +71,13 @@ public class Metal : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+        {
+            collider.enabled = false;
+            Player.Health -= 0.1f;
+            StartCoroutine(DeathCoroutine());
+        }
+
         if (collision.gameObject.tag == "Enemy")
         {
             Physics2D.IgnoreCollision(collision.collider, collision.otherCollider);
@@ -88,6 +96,7 @@ public class Metal : MonoBehaviour
         spriteRenderer.enabled = false;
         WaveManeger.Score += 100;
         yield return new WaitForSecondsRealtime(1);
+        WaveManeger.IncreasedEnemySpeed += 0.05f;
         Destroy(gameObject);
     }
 }

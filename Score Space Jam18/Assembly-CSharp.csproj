@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\LeaderBoard\PlayerManeger.cs" />
     <Compile Include="Assets\Scripts\LeaderBoard\LeaderBoard.cs" />
     <Compile Include="Assets\WaveManeger.cs" />
+    <Compile Include="Assets\Minibee.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

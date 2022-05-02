@@ -7,14 +7,21 @@ public class WaveManeger : MonoBehaviour
 {
     [SerializeField] GameObject[] EnemyPrefabs;
     [SerializeField] GameObject[] BossPrefabs;
+    [SerializeField] GameObject Minibee;
     [SerializeField] List<GameObject> EnemyQue;
     [SerializeField] int SpawnXEnemys;
     [SerializeField] List<GameObject> EnemysInScene;
     [SerializeField] int Dificalty;
+
+    public static float IncreasedEnemySpeed = 0;
  
 
     public static float Score;
     [SerializeField] TextMeshProUGUI ScoreText;
+    private void Start()
+    {
+        StartCoroutine(SpawnEnemys());
+    }
 
     private void Update()
     {
@@ -40,6 +47,16 @@ public class WaveManeger : MonoBehaviour
 
             yield return new WaitForSecondsRealtime(Random.Range(1, 3));
         }
+    }
+
+    IEnumerator BeeRain()
+    {
+        for (int i = 0; i < Random.Range(5, 15); i++)
+        {
+            Instantiate(Minibee);
+            yield return new WaitForSecondsRealtime(0.5f);
+        }
+
     }
 
     private void FixedUpdate()

@@ -102,8 +102,16 @@ public class BossScript : MonoBehaviour
     IEnumerator FinalAttack()
     {
         StartCoroutine(PlayJoke());
-        Time.timeScale = 0.5f;
-        yield return new WaitForSecondsRealtime(1);
+        Time.timeScale = 0.8f;
+        if (!isBee)
+        {
+            yield return new WaitForSecondsRealtime(8);
+        }
+        else
+        {
+            yield return new WaitForSecondsRealtime(1.5f);
+        }
+
         springJoint2D.enabled = false;
     }
 

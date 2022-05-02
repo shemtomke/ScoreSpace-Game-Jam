@@ -11,6 +11,9 @@ public class Player : MonoBehaviour
     //can the player move
     public bool isMove;
 
+    public static float Health = 1f;
+    [SerializeField] GameObject healthbar;
+
     //varibles for getting world position
     public static Vector3 MousePos;
     [SerializeField] Camera cam;
@@ -28,12 +31,19 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         Movement();
+
+        if (Metal.StaticHeldObject != null)
+        {
+            Health -= 0.001f;
+        }
     }
 
     private void Update()
     {
         MousePos = cam.ScreenToWorldPoint(Input.mousePosition);
         transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x);
+
+        healthbar.transform.localScale = new Vector2(Health * 17f, 0.4f);
     }
 
     void Movement()
