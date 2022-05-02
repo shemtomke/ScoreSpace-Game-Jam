@@ -557,7 +557,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: On a world made entirely of metal, one force is feared more than any other.
+  m_Text: 'Gauss, you are a magnet in a world of metal. '
 --- !u!222 &423264415
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -636,7 +636,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Don\u2019t"
+  m_Text: Degauss
 --- !u!222 &674031273
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1111,7 +1111,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Gauss, you live again. Don\u2019t let them put you back in the pile\u2026"
+  m_Text: "They\u2019ll put you back on the pile if they catch you"
 --- !u!222 &1449301180
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1470,7 +1470,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: All the world is your enemy, Gauss.
+  m_Text: "So don\u2019t \u2026"
 --- !u!222 &2134819617
 CanvasRenderer:
   m_ObjectHideFlags: 0
