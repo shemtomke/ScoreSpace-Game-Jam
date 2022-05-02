@@ -86,6 +86,7 @@ public class Metal : MonoBehaviour
         collider.enabled = false;
         Destroyeffect.Play();
         spriteRenderer.enabled = false;
+        WaveManeger.Score += 100;
         yield return new WaitForSecondsRealtime(1);
         Destroy(gameObject);
     }

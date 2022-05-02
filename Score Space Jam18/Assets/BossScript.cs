@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class BossScript : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class BossScript : MonoBehaviour
     [SerializeField] int SpawnXEnemys;
     [SerializeField] List<GameObject> EnemysInScene;
     [SerializeField] GameObject[] Destroyondeath;
+    public static bool BossInWorld;
 
     SpriteRenderer spriteRenderer;
     Collider2D collider;
@@ -28,11 +30,17 @@ public class BossScript : MonoBehaviour
     [SerializeField] bool move;
     [SerializeField] float moveduringrunTarget;
 
+    [SerializeField] TextMeshProUGUI HintText;
+    [SerializeField] TextMeshProUGUI JokeText;
+    [SerializeField] string[] JokeQuestions;
+    [SerializeField] string[] JokeAnsewrs;
+
     void Start()
     {
         collider = GetComponent<Collider2D>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         metal = GetComponent<Metal>();
+        BossInWorld = true;
 
 
         StartCoroutine(SpawnEnemys());
@@ -85,16 +93,18 @@ public class BossScript : MonoBehaviour
 
         if (isBee && transform.position.x > 15)
         {
-            Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
+            //Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
+            WaveManeger.Score += 1000;
             Destroy(gameObject);
         }
     }
 
     IEnumerator FinalAttack()
     {
+        StartCoroutine(PlayJoke());
+        Time.timeScale = 0.5f;
         yield return new WaitForSecondsRealtime(1);
         springJoint2D.enabled = false;
-
     }
 
 
@@ -114,6 +124,22 @@ public class BossScript : MonoBehaviour
         }
     }
 
+    IEnumerator PlayJoke()
+    {
+        int i = Random.Range(0, 9);
+        JokeText.text = JokeQuestions[i];
+        yield return new WaitForSecondsRealtime(4);
+        JokeText.text = JokeAnsewrs[i];
+        yield return new WaitForSecondsRealtime(4);
+        JokeText.text = "  ";
+        Time.timeScale = 1;
+        if (isBee)
+        {
+            HintText.text = "Throw the bee Off the right side of the screen to kill it!!";
+        }
+
+    }
+
     IEnumerator DeathCoroutine()
     {
         collider.enabled = false;
@@ -124,7 +150,10 @@ public class BossScript : MonoBehaviour
             Destroy(kill);
         }
         yield return new WaitForSecondsRealtime(1);
-        Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
+        //Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
+        WaveManeger.Score += 1000;
+        BossInWorld = false;
+        HintText.text = "  ";
         Destroy(gameObject);
     }
 }

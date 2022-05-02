@@ -338,7 +338,7 @@ SpringJoint2D:
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 5.6392093, y: 10.031285}
   m_AutoConfigureDistance: 1
-  m_Distance: 10.22802
+  m_Distance: 1.9087178
   m_DampingRatio: 1
   m_Frequency: 0.8
 --- !u!58 &2703016081161079726
@@ -384,7 +384,7 @@ MonoBehaviour:
   - {fileID: 2703016081098357326}
   springJoint2D: {fileID: 2703016081161079724}
   Destroyeffect: {fileID: 8146682841905230926}
-  DoFinalAttack: 1
+  DoFinalAttack: 0
   attackduringRun: 0
   moveduringrun: 0
   isBee: 0
@@ -392,6 +392,30 @@ MonoBehaviour:
   MoveOnGround: 0
   move: 0
   moveduringrunTarget: 0
+  JokeQuestions:
+  - 'I dated a magnet once '
+  - 'Redditors are like magnets '
+  - "Recently, Scientists have shown that Earth\u2019s magnetic field is weakening.
+    Recently, Scientists have shown that Earth\u2019s magnetic field is weakening. "
+  - 'I am a chick magnet you know. '
+  - 'I''m very pleased with my new fridge magnet '
+  - 'I have a fetish for magnets '
+  - 'What did the male magnet say to the female magnet? '
+  - 'An electron and a proton walk into a magnetic field... '
+  - A couple of magnets showed their positive side...
+  - 'Hot women are like magnets '
+  JokeAnsewrs:
+  - 'she was very attractive. '
+  - 'We attract flies and repel other humans away '
+  - "It\u2019s true. Current events have made it less attractive. "
+  - "Don\u2019t assume I attract. "
+  - 'So far I''ve got eight fridges '
+  - 'I don''t know why, I just find them attractive. '
+  - Seeing you from the back, I thought you were repulsive. But seeing you from the
+    front, I find you rather attractive.
+  - Yes. That's it. There's no punchline. Physics isn't a joke.
+  - they got divorced.
+  - 'I don''t understand them. '
 --- !u!1 &6952167795462928241
 GameObject:
   m_ObjectHideFlags: 0

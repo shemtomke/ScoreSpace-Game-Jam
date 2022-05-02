@@ -122,6 +122,30 @@ MonoBehaviour:
   MoveOnGround: 1
   move: 0
   moveduringrunTarget: 0
+  JokeQuestions:
+  - 'I dated a magnet once '
+  - 'Redditors are like magnets '
+  - "Recently, Scientists have shown that Earth\u2019s magnetic field is weakening.
+    Recently, Scientists have shown that Earth\u2019s magnetic field is weakening. "
+  - 'I am a chick magnet you know. '
+  - 'I''m very pleased with my new fridge magnet '
+  - 'I have a fetish for magnets '
+  - 'What did the male magnet say to the female magnet? '
+  - 'An electron and a proton walk into a magnetic field... '
+  - A couple of magnets showed their positive side...
+  - 'Hot women are like magnets '
+  JokeAnsewrs:
+  - 'she was very attractive. '
+  - 'We attract flies and repel other humans away '
+  - "It\u2019s true. Current events have made it less attractive. "
+  - "Don\u2019t assume I attract. "
+  - 'So far I''ve got eight fridges '
+  - 'I don''t know why, I just find them attractive. '
+  - Seeing you from the back, I thought you were repulsive. But seeing you from the
+    front, I find you rather attractive.
+  - Yes. That's it. There's no punchline. Physics isn't a joke.
+  - they got divorced.
+  - 'I don''t understand them. '
 --- !u!70 &4883282481999377830
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
