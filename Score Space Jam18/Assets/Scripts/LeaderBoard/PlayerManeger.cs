@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using LootLocker.Requests;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerManeger : MonoBehaviour
 {
@@ -27,6 +28,7 @@ public class PlayerManeger : MonoBehaviour
                 Debug.Log("Could not set player name" + response.Error);
             }
         });
+        SceneManager.LoadScene(3);
     }
 
     IEnumerator SetupRoutine()

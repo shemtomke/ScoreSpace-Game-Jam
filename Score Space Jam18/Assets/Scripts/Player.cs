@@ -27,6 +27,7 @@ public class Player : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        WaveManeger.Score = 0;
     }
 
     private void FixedUpdate()
@@ -35,10 +36,12 @@ public class Player : MonoBehaviour
 
         if (Health < 0.01)
         {
-            Time.timeScale -= 0.001f;
+            Time.timeScale -= 0.05f;
+            Health = 0f;
             if (Time.timeScale <= 0.05)
             {
                 SceneManager.LoadScene(3);
+                StartCoroutine(DeathCoroutine());
             }
 
         }
@@ -77,6 +80,10 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             //StartCoroutine(DeathCoroutine());
+        }
+        if (collision.gameObject.tag == "Boss")
+        {
+            Health = 0;
         }
     }
     

@@ -26,6 +26,9 @@ public class BossScript : MonoBehaviour
     [SerializeField] bool moveduringrun;
     [SerializeField] bool isBee;
     [SerializeField] bool DieOnGround;
+    [SerializeField] AudioSource BossMusic;
+    [SerializeField] AudioSource Levelmusic;
+    [SerializeField] AudioSource Croudlaugh;
     [SerializeField] bool MoveOnGround;
     [SerializeField] bool move;
     [SerializeField] float moveduringrunTarget;
@@ -41,6 +44,9 @@ public class BossScript : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         metal = GetComponent<Metal>();
         BossInWorld = true;
+
+        BossMusic.Play();
+        Levelmusic.Pause();
 
 
         StartCoroutine(SpawnEnemys());
@@ -96,7 +102,9 @@ public class BossScript : MonoBehaviour
             //Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
             WaveManeger.Score += 1000;
             WaveManeger.Runningevent = false;
-            JokeText.text = "  ";
+            HintText.text = "  ";
+            BossMusic.Pause();
+            Levelmusic.Play();
             Destroy(gameObject);
         }
     }
@@ -140,6 +148,7 @@ public class BossScript : MonoBehaviour
         JokeText.text = JokeQuestions[i];
         yield return new WaitForSecondsRealtime(4);
         JokeText.text = JokeAnsewrs[i];
+        Croudlaugh.Play();
         yield return new WaitForSecondsRealtime(4);
         JokeText.text = "  ";
         Time.timeScale = 1;
@@ -165,6 +174,8 @@ public class BossScript : MonoBehaviour
         BossInWorld = false;
         HintText.text = "  ";
         WaveManeger.Runningevent = false;
+        BossMusic.Pause();
+        Levelmusic.Play();
         Destroy(gameObject);
     }
 }
