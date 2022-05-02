@@ -41,7 +41,11 @@ public class Metal : MonoBehaviour
             transform.Rotate(0, 0, (Mathf.DeltaAngle(transform.eulerAngles.z, 0) / 10));
         }
 
-        StaticHeldObject = HeldObject;
+        if (HeldObject != null)
+        {
+            StaticHeldObject = HeldObject;
+        }
+
 
 
     }
@@ -52,6 +56,15 @@ public class Metal : MonoBehaviour
         {
             rb.AddForce(new Vector2((Vector2.left.x * Time.deltaTime * speed) - WaveManeger.IncreasedEnemySpeed, 0));
             rb.velocity = new Vector2(Mathf.Clamp(rb.velocity.x, -5, 5), 0);
+        }
+
+        if (transform.position.x > 15)
+        {
+            //Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
+            WaveManeger.Score += 100;
+            WaveManeger.IncreasedEnemySpeed += 0.01f;
+            GetSpeed();
+            Destroy(gameObject);
         }
     }
 
@@ -85,6 +98,7 @@ public class Metal : MonoBehaviour
 
         if (collision.gameObject.tag == "Boss")
         {
+            WaveManeger.Score += 150;
             StartCoroutine(DeathCoroutine());
         }
     }
@@ -96,7 +110,20 @@ public class Metal : MonoBehaviour
         spriteRenderer.enabled = false;
         WaveManeger.Score += 100;
         yield return new WaitForSecondsRealtime(1);
-        WaveManeger.IncreasedEnemySpeed += 0.05f;
+        WaveManeger.IncreasedEnemySpeed += 0.005f;
+        GetSpeed();
         Destroy(gameObject);
+    }
+
+    void GetSpeed()
+    {
+        if (Mathf.Abs(rb.velocity.x) > Mathf.Abs(rb.velocity.y))
+        {
+            WaveManeger.Score += Mathf.RoundToInt(Mathf.Abs(rb.velocity.x) / 5);
+        }
+        else
+        {
+            WaveManeger.Score += Mathf.RoundToInt(Mathf.Abs(rb.velocity.y) / 5);
+        }
     }
 }

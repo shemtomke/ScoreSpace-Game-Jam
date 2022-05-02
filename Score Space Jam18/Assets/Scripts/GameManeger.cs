@@ -9,6 +9,6 @@ public class GameManeger : MonoBehaviour
 
     private void Update()
     {
-        score = ForceChangeScore;
+        score = (int)WaveManeger.Score;
     }
 }

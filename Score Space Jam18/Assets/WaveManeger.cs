@@ -12,6 +12,9 @@ public class WaveManeger : MonoBehaviour
     [SerializeField] int SpawnXEnemys;
     [SerializeField] List<GameObject> EnemysInScene;
     [SerializeField] int Dificalty;
+    public static bool Runningevent;
+
+    int i;
 
     public static float IncreasedEnemySpeed = 0;
  
@@ -26,6 +29,35 @@ public class WaveManeger : MonoBehaviour
     private void Update()
     {
         ScoreText.text = Score.ToString();
+        if (EnemyQue.Count == 0 && !Runningevent && EnemysInScene.Count == 0)
+        {
+            i = Random.Range(1, 4);
+            if (i == 1)
+            {
+                Runningevent = true;
+                StartCoroutine(BeeRain());
+            }
+            else if (i == 2)
+            {
+                Runningevent = true;
+                StartCoroutine(SpawnEnemys());
+            }
+            else if (i == 3)
+            {
+                GameObject instancated = Instantiate(BossPrefabs[Random.Range(0, 2)]);
+                instancated.SetActive(true);
+                Runningevent = true;
+            }
+
+        }
+
+        for (int i = 0; i < EnemysInScene.Count; i++)
+        {
+            if (EnemysInScene[i] == null)
+            {
+                EnemysInScene.Remove(EnemysInScene[i]);
+            }
+        }
     }
 
     IEnumerator SpawnEnemys()
@@ -37,25 +69,33 @@ public class WaveManeger : MonoBehaviour
         }
 
 
-        yield return new WaitForSecondsRealtime(Random.Range(1, 3));
+        yield return new WaitForSecondsRealtime(Random.Range(1, 2));
 
         while (EnemyQue.Count > 0)
         {
-            GameObject instanciated = Instantiate(EnemyQue[0]);
-            EnemysInScene.Add(instanciated);
-            EnemyQue.RemoveAt(0);
+            for (int i = 0; i < Mathf.RoundToInt(IncreasedEnemySpeed / 5) + 1; i++)
+            {
+                GameObject instanciated = Instantiate(EnemyQue[0]);
+                EnemysInScene.Add(instanciated);
+                EnemyQue.RemoveAt(0);
+            }
 
-            yield return new WaitForSecondsRealtime(Random.Range(1, 3));
+            yield return new WaitForSecondsRealtime(Random.Range(1, 3) - IncreasedEnemySpeed);
         }
+
+        Runningevent = false;
     }
 
     IEnumerator BeeRain()
     {
+        yield return new WaitForSecondsRealtime(2);
+
         for (int i = 0; i < Random.Range(5, 15); i++)
         {
             Instantiate(Minibee);
             yield return new WaitForSecondsRealtime(0.5f);
         }
+        Runningevent = false;
 
     }
 

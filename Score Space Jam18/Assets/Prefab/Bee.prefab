@@ -107,7 +107,7 @@ MonoBehaviour:
   - {fileID: 4496244331266105971}
   - {fileID: 2703016081161079723, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
   EnemyQue: []
-  SpawnXEnemys: 4
+  SpawnXEnemys: 6
   EnemysInScene: []
   Destroyondeath:
   - {fileID: 2703016079091066548, guid: 9705728f9f83e3c448e2b2632ae2b2d7, type: 3}
@@ -122,6 +122,8 @@ MonoBehaviour:
   MoveOnGround: 1
   move: 0
   moveduringrunTarget: 0
+  HintText: {fileID: 0}
+  JokeText: {fileID: 0}
   JokeQuestions:
   - 'I dated a magnet once '
   - 'Redditors are like magnets '

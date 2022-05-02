@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
 
     public static float Health = 1f;
     [SerializeField] GameObject healthbar;
+    [SerializeField] LineRenderer lineRenderer;
 
     //varibles for getting world position
     public static Vector3 MousePos;
@@ -32,9 +33,14 @@ public class Player : MonoBehaviour
     {
         Movement();
 
-        if (Metal.StaticHeldObject != null)
+        if (Health < 0.01)
         {
-            Health -= 0.001f;
+            Time.timeScale -= 0.001f;
+            if (Time.timeScale <= 0.05)
+            {
+                SceneManager.LoadScene(3);
+            }
+
         }
     }
 
@@ -44,6 +50,19 @@ public class Player : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, rb.velocity.x);
 
         healthbar.transform.localScale = new Vector2(Health * 17f, 0.4f);
+
+
+
+        if (Input.GetMouseButton(0) && Metal.StaticHeldObject != null)
+        {
+            lineRenderer.enabled = true;
+            lineRenderer.SetPosition(1, transform.position);
+            lineRenderer.SetPosition(0, Metal.StaticHeldObject.transform.position);
+        }
+        else
+        {
+            lineRenderer.enabled = false;
+        }
     }
 
     void Movement()

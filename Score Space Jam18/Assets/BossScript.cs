@@ -95,6 +95,8 @@ public class BossScript : MonoBehaviour
         {
             //Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
             WaveManeger.Score += 1000;
+            WaveManeger.Runningevent = false;
+            JokeText.text = "  ";
             Destroy(gameObject);
         }
     }
@@ -162,6 +164,7 @@ public class BossScript : MonoBehaviour
         WaveManeger.Score += 1000;
         BossInWorld = false;
         HintText.text = "  ";
+        WaveManeger.Runningevent = false;
         Destroy(gameObject);
     }
 }
