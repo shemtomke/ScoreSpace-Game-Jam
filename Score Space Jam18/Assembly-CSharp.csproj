@@ -69,6 +69,7 @@
     <Compile Include="Assets\WaveManeger.cs" />
     <Compile Include="Assets\Minibee.cs" />
     <Compile Include="Assets\ButtonScript.cs" />
+    <Compile Include="Assets\DisplayScore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

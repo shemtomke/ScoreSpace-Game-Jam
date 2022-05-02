@@ -66,6 +66,15 @@ public class Metal : MonoBehaviour
             GetSpeed();
             Destroy(gameObject);
         }
+
+        if (transform.position.x < -10)
+        {
+            //Instantiate(BossPrefabs[Random.Range(0, BossPrefabs.Length - 1)]);
+            WaveManeger.Score += 100;
+            WaveManeger.IncreasedEnemySpeed += 0.01f;
+            GetSpeed();
+            Destroy(gameObject);
+        }
     }
 
     private void OnMouseDown()

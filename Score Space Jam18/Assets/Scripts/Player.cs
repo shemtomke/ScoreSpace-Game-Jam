@@ -26,8 +26,11 @@ public class Player : MonoBehaviour
     Rigidbody2D rb;
     private void Start()
     {
+        Time.timeScale = 1;
         rb = GetComponent<Rigidbody2D>();
         WaveManeger.Score = 0;
+        WaveManeger.IncreasedEnemySpeed = 0;
+        Health = 1;
     }
 
     private void FixedUpdate()

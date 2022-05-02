@@ -12,6 +12,7 @@ public class ButtonScript : MonoBehaviour
 
     public void Retry()
     {
+        Time.timeScale = 1;
         SceneManager.LoadScene(2);
     }
 }

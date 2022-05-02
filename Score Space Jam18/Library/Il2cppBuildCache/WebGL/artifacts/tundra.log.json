@@ -2,3 +2,5 @@
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"all_tundra_nodes","enqueuedNodeIndex":0}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"WriteResponseFile artifacts/rsp/12807714094761460944.rsp","enqueuedNodeIndex":1,"enqueueingNodeAnnotation":"all_tundra_nodes","enqueueingNodeIndex":0}
 {"msg":"enqueueNode","enqueuedNodeAnnotation":"Il2Cpp E:/Git/ScoreSpace-Game-Jam/Score Space Jam18/Library/Il2cppBuildCache/WebGL/Native/build.bc","enqueuedNodeIndex":2,"enqueueingNodeAnnotation":"all_tundra_nodes","enqueueingNodeIndex":0}
+{"msg":"inputSignatureChanged","annotation":"Il2Cpp E:/Git/ScoreSpace-Game-Jam/Score Space Jam18/Library/Il2cppBuildCache/WebGL/Native/build.bc","index":2,"changes":[{"key":"InputFileDigest","path":"E:\\Git\\ScoreSpace-Game-Jam\\Score Space Jam18\\Temp\\StagingArea\\Data\\Managed\\Assembly-CSharp.dll","dependency":"explicit"}]}
+{"msg":"noderesult","annotation":"Il2Cpp E:/Git/ScoreSpace-Game-Jam/Score Space Jam18/Library/Il2cppBuildCache/WebGL/Native/build.bc","index":2,"exitcode":0}

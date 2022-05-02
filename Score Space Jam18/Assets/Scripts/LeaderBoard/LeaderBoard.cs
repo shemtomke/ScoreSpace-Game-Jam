@@ -66,6 +66,8 @@ public class LeaderBoard : MonoBehaviour
                 done = true;
             }
         });
+
+
         yield return new WaitWhile(() => done == false);
     }
 }

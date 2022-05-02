@@ -1130,7 +1130,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Click and hold on the enemy to pick it up then throw it to the left of
+  m_Text: Click and hold on the enemy to pick it up then throw it to the Right of
     the screen to kill it
 --- !u!222 &674031273
 CanvasRenderer:
