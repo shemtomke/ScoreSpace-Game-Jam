@@ -1,2 +1,3 @@
-# ScoreSpace-Game-Jam
+# GAUSS
+ScoreSpace-Game-Jam
 Game Jam
